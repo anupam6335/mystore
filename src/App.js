@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComponent from './components/Navbar';
+import { Container} from 'react-bootstrap';
 
+// import react router 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // this container will allow our entire application to kind of sit closer to the middle of the screen
+    // so we can wrap our entire application
+    <Container>
+      <NavbarComponent></NavbarComponent>
+    </Container>
   );
 }
 
