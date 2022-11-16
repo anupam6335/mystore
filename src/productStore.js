@@ -3,31 +3,33 @@
     on our web page
  */
 
-export const productArray = [
-    {
-        id: '1',
-        title: 'Coffee',
-        price: 299
-    },
-    {
-        id: '2',
-        title: 'iPhone',
-        price: 129999
-    },
-    {
-        id: '3',
-        title: 'Camera',
-        price: 58999
+    const productArray = [
+        {
+            id: "price_1LnUTFDM1jwCEz8OGoOSXiSM",
+            title: "Coffee",
+            price: 4.99
+        },
+        {
+            id: "price_1LnUTxDM1jwCEz8OAqHYTwKQ",
+            title: "Sunglasses",
+            price: 9.99
+        },
+        {
+            id: "price_1LnUUoDM1jwCEz8OvxIcJ7to",
+            title: "Camera",
+            price: 39.99
+        }
+    ];
+    
+    function getProductData(id) {
+        let productData = productArray.find(product => product.id === id);
+    
+        if (productData == undefined) {
+            console.log("Product data does not exist for ID: " + id);
+            return undefined;
+        }
+    
+        return productData;
     }
-]
-
-export function getProducts ( id ) {
-    let productData = productArray.find(product => product.id === id);
-
-    // if product does not exist
-    if(productData === undefined) return undefined;
-
-    return productData;
-}
-
-// export { productArray, getProducts};
+    
+    export { productArray, getProductData };

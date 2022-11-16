@@ -21,6 +21,7 @@ export const CartContext = createContext({
     getTotalCost: () => {}
 });
 
+
 export const CartProvider = ( { children } ) => {
         {/* anything inside the cardProviders are children */}
         const [ cartProducts, setCartProducts ] = useState([]);
